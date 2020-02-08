@@ -18,8 +18,8 @@ public class SSRUtils {
 
         String first_part = array[0];
         String second_part = array[1];
-        System.out.println(first_part);
-        System.out.println(second_part);
+//        System.out.println(first_part);
+//        System.out.println(second_part);
 
         Map<String, String> map = new HashMap<>();
 
@@ -35,7 +35,7 @@ public class SSRUtils {
         for(String item : second_part_array) {
             map.put(getKey(item), getValue(item));
         }
-        System.out.println(map);
+        System.out.println(map.get("remarks"));
 
 
         return map;

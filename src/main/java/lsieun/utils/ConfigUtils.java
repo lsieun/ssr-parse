@@ -7,16 +7,12 @@ import java.util.Map;
 import lsieun.utils.io.FileUtils;
 
 public class ConfigUtils {
-    public static void write(String ssr, String filename) {
+    public static void write(String ssr, String filepath) {
         Map<String, String> map = SSRUtils.parse(ssr);
         List<String> lines = ConfigUtils.getConfigLines(map);
-
-        String user_dir = System.getProperty("user.dir");
-        String filepath = String.format("%s/target/%s", user_dir, filename);
-
         FileUtils.writeLines(filepath, lines);
 
-        System.out.println(String.format("file://%s", filepath));
+
     }
 
     public static List<String> getConfigLines(Map<String, String> map) {
